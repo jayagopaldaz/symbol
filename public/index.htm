@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Symbol</title>
+        <link rel="stylesheet" href="./main.css" />
+    </head>
+    <body>
+        <div class="container">
+
+            <!-- inner dialog of character -->
+            <div class="row chatbox" style="margin-right: 50px">
+                <div class="text" id="left"></div>
+                <div class="button" id="left/submit">Update</div>
+            </div>
+
+            <!-- dialog between active character and human -->
+            <div class="row chatbox" style="margin-left: 50px">
+                <div class="text" id="right">
+                    <span id="right_log">abc</span>
+                    <span 
+                        id="right_input" 
+                        contenteditable 
+                        onfocus="if (this.innerText==='...') this.innerText=''"
+                        onblur="if (this.innerText==='') this.innerText='...';
+                                else this.innerHTML = this.innerText"
+                    >...</span>
+                </div>
+                <div class="button" id="right/submit">Reply</div>
+            </div>
+
+            <!-- generated image for scene prompt from active character perspective -->
+            <!-- <img class=row id="scene" src="./ai.png" /> -->
+        </div>
+    </body>
+    <script src="./main.js"></script>
+</html> 
